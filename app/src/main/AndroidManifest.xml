@@ -10,14 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidRoom">
         <activity android:name=".UpdateTaskActivity"></activity>
-        <activity android:name=".AddTaskActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTop"> b
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".AddEditNoteActivity"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+
     </application>
 
 </manifest>
