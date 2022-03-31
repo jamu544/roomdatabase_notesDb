@@ -1,6 +1,8 @@
-package android.com.jumpco.io.androidroom;
+package android.com.jumpco.io.androidroom.viewmodel;
 
 import android.app.Application;
+import android.com.jumpco.io.androidroom.model.Note;
+import android.com.jumpco.io.androidroom.repository.NoteRepository;
 
 import java.util.List;
 

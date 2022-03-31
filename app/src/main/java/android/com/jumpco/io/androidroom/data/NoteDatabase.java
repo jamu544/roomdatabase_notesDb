@@ -1,5 +1,6 @@
-package android.com.jumpco.io.androidroom;
+package android.com.jumpco.io.androidroom.data;
 
+import android.com.jumpco.io.androidroom.model.Note;
 import android.content.Context;
 import android.os.AsyncTask;
 
@@ -55,9 +56,9 @@ public abstract class NoteDatabase extends RoomDatabase {
          */
         @Override
         protected Void doInBackground(Void... voids) {
-            noteDao.insert(new Note("Qatar","Airways",1));
-            noteDao.insert(new Note("Emirates","Airways",2));
-            noteDao.insert(new Note("British","Airways",3));
+            noteDao.insert(new Note("Pack Clothes","Jeans,Shirts, Socks",1));
+            noteDao.insert(new Note("Book a test drive","Call Administrator ",2));
+            noteDao.insert(new Note("Visit Dave","at 15:00",3));
 
             return null;
         }

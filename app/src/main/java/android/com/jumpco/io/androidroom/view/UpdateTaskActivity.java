@@ -1,7 +1,8 @@
-package android.com.jumpco.io.androidroom;
+package android.com.jumpco.io.androidroom.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.com.jumpco.io.androidroom.R;
 import android.os.Bundle;
 
 public class UpdateTaskActivity extends AppCompatActivity {

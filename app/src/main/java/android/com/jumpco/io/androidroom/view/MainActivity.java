@@ -1,4 +1,4 @@
-package android.com.jumpco.io.androidroom;
+package android.com.jumpco.io.androidroom.view;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,6 +9,11 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.com.jumpco.io.androidroom.data.NoteDatabase;
+import android.com.jumpco.io.androidroom.R;
+import android.com.jumpco.io.androidroom.adapter.NoteAdapter;
+import android.com.jumpco.io.androidroom.model.Note;
+import android.com.jumpco.io.androidroom.viewmodel.NoteViewModel;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;

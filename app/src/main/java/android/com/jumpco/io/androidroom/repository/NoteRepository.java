@@ -1,7 +1,9 @@
-package android.com.jumpco.io.androidroom;
+package android.com.jumpco.io.androidroom.repository;
 
 import android.app.Application;
-import android.app.AsyncNotedAppOp;
+import android.com.jumpco.io.androidroom.data.NoteDao;
+import android.com.jumpco.io.androidroom.data.NoteDatabase;
+import android.com.jumpco.io.androidroom.model.Note;
 import android.os.AsyncTask;
 
 import java.util.List;

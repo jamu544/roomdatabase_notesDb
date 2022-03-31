@@ -1,10 +1,10 @@
-package android.com.jumpco.io.androidroom;
+package android.com.jumpco.io.androidroom.adapter;
 
+import android.com.jumpco.io.androidroom.R;
+import android.com.jumpco.io.androidroom.model.Note;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -13,27 +13,27 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteHolder> {
+public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
     private List<Note> notes = new ArrayList<>();
     private OnItemClickListener listener;
 
 
     @NonNull
     @Override
-    public NoteHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.note_item, parent, false);
 
-        return new NoteHolder(itemView);
+        return new ViewHolder(itemView);
     }
 
 
     @Override
-    public void onBindViewHolder(@NonNull NoteAdapter.NoteHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Note currentNote = notes.get(position);
         holder.textViewTitle.setText(currentNote.getTitle());
         holder.textViewDescription.setText(currentNote.getDescription());
-        holder.textViewPriority.setText(String.valueOf(currentNote.getDescription()));
+        holder.textViewPriority.setText(String.valueOf(currentNote.getPriority()));
 
     }
 
@@ -52,12 +52,12 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteHolder> {
         return notes.get(position);
     }
 
-    public class NoteHolder extends RecyclerView.ViewHolder {
-        private TextView textViewTitle;
-        private TextView textViewDescription;
-        private TextView textViewPriority;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        private final TextView textViewTitle;
+        private final TextView textViewDescription;
+        private final TextView textViewPriority;
 
-        public NoteHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewTitle = itemView.findViewById(R.id.text_view_title);
             textViewDescription = itemView.findViewById(R.id.text_view_description);

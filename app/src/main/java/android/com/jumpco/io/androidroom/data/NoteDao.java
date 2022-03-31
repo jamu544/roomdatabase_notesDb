@@ -1,4 +1,6 @@
-package android.com.jumpco.io.androidroom;
+package android.com.jumpco.io.androidroom.data;
+
+import android.com.jumpco.io.androidroom.model.Note;
 
 import java.util.List;
 

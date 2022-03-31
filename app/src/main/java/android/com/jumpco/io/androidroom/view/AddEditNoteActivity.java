@@ -1,8 +1,9 @@
-package android.com.jumpco.io.androidroom;
+package android.com.jumpco.io.androidroom.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.com.jumpco.io.androidroom.R;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;

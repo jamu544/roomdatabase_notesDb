@@ -1,4 +1,4 @@
-package android.com.jumpco.io.androidroom;
+package android.com.jumpco.io.androidroom.model;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
